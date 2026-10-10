@@ -1,4 +1,5 @@
 ---
-title: Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-date: 2022-01-12 00:01:00 +0800
+title: "Template example (hidden)"
+date: 2020-01-01
+show: false
 ---

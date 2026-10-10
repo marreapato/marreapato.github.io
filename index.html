@@ -1,39 +1,26 @@
 ---
 layout: default
-title : Homepage
+title: Home
 navbar_title: Home
 ---
-
 <div class="row">
-    <div class="col-lg-3 col-md-4">
-        {% include widgets/profile_card_mini.html %}
+  <div class="col-lg-3 col-md-4">{% include widgets/profile_card_mini.html %}</div>
+  <div class="col-lg-9 col-md-8">
+    {% include widgets/profile_card_bio_only.html %}
+    {% if site.data.display.homepage.show_experience %}{% include widgets/experience_card.html %}{% endif %}
+    {% if site.data.display.homepage.show_news %}
+      {% assign count_news = site.news | size %}
+      {% if count_news > 0 %}{% include widgets/news_card.html limit=site.data.display.homepage.num_news %}{% endif %}
+    {% endif %}
+    <div class="my-3 bg-white shadow-sm rounded-xl p-4">
+      <h5>Research, writing & community</h5>
+      <p>I write about my research interests in AI agents, memory-augmented learning, and continual learning, alongside academic and community experiences.</p>
+      <a class="mr-3" href="{{ '/blog' | relative_url }}"><i class="fas fa-pen"></i> Read my blog</a>
+      <a href="{{ '/showcase' | relative_url }}"><i class="fas fa-layer-group"></i> Explore my showcase</a>
     </div>
-    <div class="col-lg-9 col-md-8">
-
-        {% include widgets/profile_card_bio_only.html %}
-
-        <!-- Debugging widgets -->
-        {% include widgets/debug_repo_name.html %}
-        {% include widgets/debug_url.html %}
-
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
-        {% endif %}
-    </div>
+    {% if site.data.display.homepage.show_selected_publications %}
+      {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+      {% include widgets/publication_card.html publications=pubs title='<i class="fas fa-star"></i> Selected Publications' %}
+    {% endif %}
+  </div>
 </div>

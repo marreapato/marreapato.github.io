@@ -1,27 +1,42 @@
-# Academic homepage: content update (October 2026)
+# Complete Lucas Rabelo website update — install at repository ROOT
 
-This ZIP contains **new Jekyll collection files** for your existing `marreapato/marreapato.github.io` repository. It is an **incremental update**: keep the existing `_data/profile.yml`, `_config.yml`, assets, publications and website layouts from the previous package.
+Repository: https://github.com/marreapato/marreapato.github.io
 
-## Install
+## Why the previous updates looked incomplete
 
-1. Unzip and copy the `_news`, `_posts` and `_showcase/profile` folders into the **repository root**, preserving folder names. Commit and push to `main` (or open a PR).
-2. Delete the **fictional sample news** files if they still exist: `_news/2022-lorem.md`, `_news/2023-news1.md`, `_news/2023-news2.md`, `_news/2024-news1.md`, `_news/2024-news2.md`, `_news/2024-news3.md`.
-3. Delete the **sample blog posts**, if they still exist: `_posts/2024-01-01-blog-post-1.md`, `_posts/2025-01-01-blog-post-2.md`, `_posts/2026-03-17-acknowledgement.md` (the last is a template acknowledgement, not a real post by you).
-4. Remove or set `show: false` for showcase demo files in `_showcase/default` and `_showcase/cats` if they still appear. Do not delete your own curated showcase content.
-5. Ensure `_data/display.yml` still has `homepage.show_news: true` and `homepage.show_experience: true`.
+GitHub still showed `_data/profile.yml` containing `Your Name`, the cat biography, placeholder school names, and a commented-out LinkedIn field. The four real news entries existed, but six fictional template news items also existed, and sample blog/showcase cards were still published.
 
-## Contents
+## Install all at once
 
-- 4 news entries: bachelor's completion (2022), master's completion (2025), PhD start (2025), EBDVF volunteering (2026).
-- 3 original blog entries: volunteering, academic journey, and industry-to-research experience.
-- 4 showcase cards: education, research, volunteering and professional experience.
+1. Extract the ZIP. It contains `_data`, `_includes`, `_news`, `_posts`, `_showcase`, `_config.yml`, `index.html` and this README.
+2. Copy everything **inside** the extracted directory into the ROOT of `marreapato/marreapato.github.io` (`main` branch), **preserving folder paths and overwriting matching files**. Do NOT create a nested `lucas_complete_site_update` folder.
+3. Commit and wait for GitHub Pages to redeploy (check the repository's Actions tab).
+4. Hard refresh https://marreapato.github.io/ (Ctrl+Shift+R). Check the main name, portrait, LinkedIn icon, About Me, Education, Experience, News & Milestones, Blog, Showcase, and publication page.
 
-## Accuracy notes
+### What changed
 
-- Education, employment, dates and skills are based on the provided LinkedIn-exported PDF, not verified certificates.
-- The EBDVF 2026 host volunteering and acknowledgements to Prof. Ed Curry, RinnAI and the University of Galway were supplied in an earlier conversation; these details do **not** appear in the PDF.
-- The research-interests descriptions reflect the topics you described in earlier conversations.
-- Blog posts are written in first person for your editorial review and are **not copied verbatim** from LinkedIn.
-- News dates for year/month milestones use the end of the documented month or the first day of the documented month **as display dates**, not verified graduation/commencement days. Adjust these if you prefer the precise dates.
-- News and posts are dated historically according to the events; posts are drafted in October 2026, not claimed to have been originally published at the time of each historical event.
-- No new portrait image is included: continue using the existing `assets/images/photos/portrait.jpg`.
+- `_data/profile.yml` fixes name, affiliation, email, Google Scholar ID, GitHub, LinkedIn, biography, education, positions, volunteering, experience, and honors. Uses existing `assets/images/photos/portrait.jpg` (not included in ZIP; already in repository).
+- `_includes/widgets/experience_card.html` skips missing logos to avoid broken icons.
+- `_includes/widgets/news_card.html` excludes hidden template entries and labels section News & Milestones.
+- `_news/` provides four dated real announcements and overwrites six fictitious template entries with `show: false`.
+- `_posts/` provides three original blog posts and de-publishes three template demo posts.
+- `_showcase/profile/` adds four visible real cards; existing unrelated demo cards in `_showcase/default/` and `_showcase/cats/` are set to `show: false`.
+- Homepage now provides prominent Blog and Showcase links, omits debug widgets, and displays News after education/experience.
+- `_config.yml` sets baseurl to empty for the root GitHub Pages site.
+
+### Important
+
+GitHub's browser uploader can be awkward for directory uploads. The safest one-step method is to extract the ZIP into a LOCAL CLONE, then commit/push the resulting changes:
+
+```bash
+git clone https://github.com/marreapato/marreapato.github.io.git
+cd marreapato.github.io
+# Copy extracted contents INTO this folder, overwriting matching files.
+git add .
+git commit -m "Update Lucas Rabelo profile, news, blog and showcase"
+git push origin main
+```
+
+This is a file overlay, **not** a full replacement repository. Do not delete your existing `assets`, styles, layouts, or publications. If your local profile contains newer edits than the publicly readable GitHub version, compare those before overwriting.
+
+The titles and articles use information from your LinkedIn profile PDF and the EBDVF experience you described. Research descriptions were informed by your stated PhD interests. Dates and first-person wording should be checked before publication.

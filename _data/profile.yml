@@ -1,58 +1,55 @@
-primary_name: "Your Name"
+primary_name: "Lucas Rabelo"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Lucas Rabelo"
 
 positions:
-- name: Title or Position
-- name: Affiliation Name
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+  - name: "PhD Researcher in Computer Science"
+  - name: "University of Galway, Ireland"
 
-
-email: "your@email.com"
-# cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
-# linkedin: your-linked-in-id
-# orcid: 0000-0000-0000-0000
+email: "lucasrabelop59@gmail.com"
+gscholar: "J-OGsEEAAAAJ"
+github: "marreapato"
+linkedin: "lucas-rabelo-ab58492a1"
 
 short_bio_text_justify: false
 short_bio: >-
-  <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
-  </p>
-  <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
-  </p>
+  <p>I am a PhD researcher in Computer Science at the <a href="https://www.universityofgalway.ie/">University of Galway</a>, Ireland. My research focuses on <strong>AI agents, memory-augmented learning, continual learning, and inference-time adaptation</strong>, including how intelligent systems can preserve and use knowledge over time.</p>
+  <p>I hold an MSc in Computer Science from the <strong>Federal University of Pernambuco (UFPE)</strong>, where I researched explainable AI, machine learning, and data mining, and a BSc in Statistics from the <strong>Federal University of Bahia (UFBA)</strong>.</p>
+  <p>Before beginning my PhD, I worked in data science and analytics, applying statistical methods, machine learning, time-series forecasting, data engineering, and interactive dashboards to real-world problems. My interests connect research on reliable adaptive AI with practical AI systems.</p>
+  <p>In September–October 2026, I volunteered as a host at the European Big Data Value Forum (EBDVF) in Galway, engaging with the European data and AI research community.</p>
+  <p><strong>Research interests:</strong> AI Agents · Agentic AI · Continual Learning · Long-Term Memory · Memory-Augmented Learning · Retrieval-Augmented Generation · Temporal Reasoning · Explainable AI.</p>
+  <p><strong>Technical skills:</strong> Python, R, PyTorch, SQL, MongoDB, time-series forecasting, machine learning, statistical modeling, Power BI, R Shiny, and data visualization.</p>
+  <p>Find my professional background on <a href="https://www.linkedin.com/in/lucas-rabelo-ab58492a1/">LinkedIn</a>, code on <a href="https://github.com/marreapato">GitHub</a>, publications on <a href="https://scholar.google.com/citations?user=J-OGsEEAAAAJ">Google Scholar</a>, and articles on <a href="https://medium.com/@lucasrabeloufba">Medium</a>.</p>
 
 portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
-  position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+  - name: "University of Galway"
+    position: "PhD in Computer Science"
+    date: "Sep 2025 – present"
+  - name: "Federal University of Pernambuco (UFPE)"
+    position: "MSc in Computer Science"
+    date: "Aug 2023 – Jul 2025"
+  - name: "Federal University of Bahia (UFBA)"
+    position: "BSc in Statistics"
+    date: "Mar 2018 – Dec 2022"
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+  - name: "University of Galway"
+    position: "PhD Researcher"
+    date: "Oct 2025 – present"
+  - name: "Outsmarting"
+    position: "Junior Data Scientist III"
+    date: "Mar 2023 – Sep 2023"
+  - name: "Outsmarting"
+    position: "Data Analyst"
+    date: "Sep 2021 – Mar 2023"
+  - name: "SEPLAN – Bahia State Planning Secretariat"
+    position: "Statistics Intern"
+    date: "Jul 2021 – Sep 2021"
 
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+  - name: "Scientific and Technological Initiation Highlights"
+    date: "2020–2021"
+  - name: "Second Best Full Paper"
+    date: ""

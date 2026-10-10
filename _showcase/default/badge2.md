@@ -1,9 +1,5 @@
 ---
-show: true
-width: 1
-date: 2017-01-12 00:01:00 +0800
-class: ""  # Override the default card style
+show: false
+width: 4
+date: 2020-01-01
 ---
-<div>
-<img src="{{ 'assets/images/badges/MIT_Social_circle.png' | relative_url }}" class="img-fluid rounded-xl" >
-</div>
